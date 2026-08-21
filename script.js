@@ -238,4 +238,3 @@ function storeValuePlus() {
     document.getElementById("display").textContent = "+"
 }
 
-//+ and - doesn't seem to be working!
