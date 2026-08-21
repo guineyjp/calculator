@@ -16,8 +16,7 @@ const divide = function(a,b) {
     return a / b
 }
 
-
-//a calculator operation will consist of a number, an operator and another number. For example, 3+5.
+//a calculator operation will consist of a number, an operator and another number. For example, 3+5
 //create 3 variables, one for each part of the operation
 
 let firstNum;
@@ -25,6 +24,7 @@ let secondNum;
 let operator;
 
 //for operate, will need to check which operator was passed in so that we know which function to use
+
 
 function operate(a,b,c) {
     if (b === "-") {
@@ -42,3 +42,200 @@ function operate(a,b,c) {
       }
 
 }
+
+
+//ok, so now need to take the values in
+
+const buttonClick = document.getElementById("seven");
+buttonClick.addEventListener("click", storeValue);
+
+function storeValue() {
+    if (operator) {
+        secondNum = 7;
+    } else {
+        firstNum = 7
+    }
+    document.getElementById('display').textContent = 7;
+
+    //if operator hasn't been pressed (i.e. undefined), then we're on the first number, if it has, we're on the second
+    //this is a way to identify whether we're on first or second num as firstNum of course comes before the operator
+}
+
+
+const eightClick = document.getElementById("eight");
+eightClick.addEventListener("click", storeValueEight);
+
+function storeValueEight() {
+    if (operator) {
+        secondNum = 8;
+    } else {
+        firstNum = 8
+    }
+    document.getElementById('display').textContent = 8;
+
+}
+
+
+const nineClick = document.getElementById("nine"); // we're just selecting the element in the index file here
+nineClick.addEventListener("click", storeValueNine); // now listening for an event "click" and saying what to do with it - though haven't defined that function yet
+
+function storeValueNine() {
+    if(operator) {
+        secondNum = 9;
+    } else {
+        firstNum = 9
+    }
+    document.getElementById('display').textContent = 9; //identifying which number it is (i.e. first or second) and then passing it through to the display element
+}
+
+
+const xClick = document.getElementById("multiply"); //selecting the element in the index file here
+xClick.addEventListener("click", storeValueX); //listening for the event click
+
+function storeValueX() {
+   operator = "*";
+   document.getElementById('display').textContent = "x";
+
+}
+
+
+const fourClick = document.getElementById("four");
+fourClick.addEventListener("click", storeValueFour);
+
+function storeValueFour() {
+    if(operator) {
+        secondNum = 4;
+    } else {
+        firstNum = 4;
+    }
+    document.getElementById('display').textContent = 4;
+}
+
+const fiveClick = document.getElementById("five");
+fiveClick.addEventListener("click", storeValueFive);
+
+function storeValueFive() {
+    if(operator) {
+        secondNum = 5;
+    } else {
+        firstNum = 5;
+    }
+    document.getElementById('display').textContent = 5;
+}
+
+const sixClick = document.getElementById("six");
+sixClick.addEventListener("click", storeValueSix);
+
+function storeValueSix() {
+    if(operator) {
+        secondNum = 6;
+    } else {
+        firstNum = 6;
+    }
+    document.getElementById('display').textContent = 6
+}
+
+const minusClick = document.getElementById("minus");
+minusClick.addEventListener("click", storeValueMinus);
+
+function storeValueMinus() {
+    operator ="-";
+    document.getElementById("display").textContent= "-";
+
+}
+
+const oneClick = document.getElementById("one")
+oneClick.addEventListener("click", storeValueOne)
+
+function storeValueOne() {
+ if (operator) {
+    secondNum = 1;
+ } else {
+    firstNum = 1;
+ }  
+ document.getElementById("display").textContent = 1 ;
+
+}
+
+const twoClick = document.getElementById("two");
+twoClick.addEventListener("click", storeValueTwo);
+
+function storeValueTwo() {
+
+     if(operator) {
+        secondNum = 2;
+    } else {
+        firstNum = 2;
+    }
+   
+    document.getElementById("display").textContent = 2;
+}
+
+const threeClick = document.getElementById("three");
+threeClick.addEventListener("click", storeValueThree);
+
+function storeValueThree() {
+    if(operator) {
+        secondNum = 3;
+    } else {
+        firstNum = 3;
+    }
+
+    document.getElementById("display").textContent = 3;
+}
+
+
+const divideClick = document.getElementById("divide");
+divideClick.addEventListener("click", storeValueDivide);
+
+function storeValueDivide() {
+    operator = "/";
+    document.getElementById("display").textContent = "/"
+}
+
+
+const zeroClick = document.getElementById("zero");
+zeroClick.addEventListener("click", storeValueZero);
+
+function storeValueZero() {
+    if(operator) {
+        secondNum = 0;
+    } else {
+        firstNum = 0;
+    }
+
+    document.getElementById("display").textContent = 0;
+}
+
+const clearClick = document.getElementById("clear");
+clearClick.addEventListener("click", storeValueClear);
+
+function storeValueClear(){
+    firstNum = undefined;
+    secondNum = undefined;
+    operator = undefined;
+    document.getElementById("display").textContent = "0";
+}
+
+
+const equalsClick = document.getElementById("equals");
+equalsClick.addEventListener("click", storeValueEquals);
+
+function storeValueEquals() {
+    console.log(firstNum, operator, secondNum)
+    const result = operate(firstNum, operator, secondNum);
+    document.getElementById("display").textContent = result;
+    firstNum = undefined;
+    secondNum = undefined;
+    operator = undefined;
+}
+
+const plusClick = document.getElementById("plus");
+plusClick.addEventListener("click", storeValuePlus );
+
+function storeValuePlus() {
+    operator = "+";
+    document.getElementById("display").textContent = "+"
+}
+
+//+ and - doesn't seem to be working!
