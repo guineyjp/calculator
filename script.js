@@ -68,11 +68,13 @@ eightClick.addEventListener("click", storeValueEight);
 
 function storeValueEight() {
     if (operator) {
-        secondNum = 8;
+        secondNum += "8";
+        document.getElementById('display').textContent = secondNum;
     } else {
-        firstNum = 8
+        firstNum += "8";
+        document.getElementById('display').textContent = firstNum;
     }
-    document.getElementById('display').textContent = 8;
+    
 
 }
 
