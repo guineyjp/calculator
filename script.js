@@ -19,8 +19,8 @@ const divide = function(a,b) {
 //a calculator operation will consist of a number, an operator and another number. For example, 3+5
 //create 3 variables, one for each part of the operation
 
-let firstNum;
-let secondNum;
+let firstNum =""; //initialising firstNum as it will now start as a string. Otherwise will show undefined once concatenated
+let secondNum = "";
 let operator;
 
 //for operate, will need to check which operator was passed in so that we know which function to use
@@ -51,12 +51,13 @@ buttonClick.addEventListener("click", storeValue);
 
 function storeValue() {
     if (operator) {
-        secondNum = 7;
+        secondNum += "7";
+        document.getElementById('display').textContent = secondNum;
     } else {
-        firstNum = 7
+        firstNum += "7";
+        document.getElementById('display').textContent = firstNum;
     }
-    document.getElementById('display').textContent = 7;
-
+    
     //if operator hasn't been pressed (i.e. undefined), then we're on the first number, if it has, we're on the second
     //this is a way to identify whether we're on first or second num as firstNum of course comes before the operator
 }
@@ -211,8 +212,8 @@ const clearClick = document.getElementById("clear");
 clearClick.addEventListener("click", storeValueClear);
 
 function storeValueClear(){
-    firstNum = undefined;
-    secondNum = undefined;
+    firstNum = "";
+    secondNum = "";
     operator = undefined;
     document.getElementById("display").textContent = "0";
 }
@@ -225,8 +226,8 @@ function storeValueEquals() {
     console.log(firstNum, operator, secondNum)
     const result = operate(firstNum, operator, secondNum);
     document.getElementById("display").textContent = result;
-    firstNum = undefined;
-    secondNum = undefined;
+    firstNum = "";
+    secondNum = "";
     operator = undefined;
 }
 
