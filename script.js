@@ -74,7 +74,7 @@ function storeValueEight() {
         firstNum += "8";
         document.getElementById('display').textContent = firstNum;
     }
-    
+         
 
 }
 
@@ -84,11 +84,12 @@ nineClick.addEventListener("click", storeValueNine); // now listening for an eve
 
 function storeValueNine() {
     if(operator) {
-        secondNum = 9;
+        secondNum += "9";
+        document.getElementById('display').textContent = secondNum;
     } else {
-        firstNum = 9
+        firstNum += "9";
+        document.getElementById("display").textContent = firstNum;
     }
-    document.getElementById('display').textContent = 9; //identifying which number it is (i.e. first or second) and then passing it through to the display element
 }
 
 
