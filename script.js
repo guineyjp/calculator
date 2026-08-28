@@ -231,7 +231,7 @@ equalsClick.addEventListener("click", storeValueEquals);
 
 function storeValueEquals() {
     console.log(firstNum, operator, secondNum)
-    const result = operate(firstNum, operator, secondNum);
+    const result = operate(Number(firstNum), operator, Number(secondNum));
     document.getElementById("display").textContent = result;
     firstNum = "";
     secondNum = "";
