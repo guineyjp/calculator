@@ -108,11 +108,12 @@ fourClick.addEventListener("click", storeValueFour);
 
 function storeValueFour() {
     if(operator) {
-        secondNum = 4;
+        secondNum += "4";
+        document.getElementById("display").textContent = secondNum;
     } else {
-        firstNum = 4;
+        firstNum += "4";
+        document.getElementById("display").textContent = firstNum;
     }
-    document.getElementById('display').textContent = 4;
 }
 
 const fiveClick = document.getElementById("five");
@@ -120,11 +121,12 @@ fiveClick.addEventListener("click", storeValueFive);
 
 function storeValueFive() {
     if(operator) {
-        secondNum = 5;
+        secondNum += "5";
+        document.getElementById("display").textContent = secondNum;
     } else {
-        firstNum = 5;
+        firstNum += "5";
+        document.getElementById('display').textContent = firstNum;
     }
-    document.getElementById('display').textContent = 5;
 }
 
 const sixClick = document.getElementById("six");
@@ -132,11 +134,12 @@ sixClick.addEventListener("click", storeValueSix);
 
 function storeValueSix() {
     if(operator) {
-        secondNum = 6;
+        secondNum += "6";
+        document.getElementById('display').textContent = secondNum;
     } else {
-        firstNum = 6;
+        firstNum += "6";
+        document.getElementById('display').textContent = firstNum;
     }
-    document.getElementById('display').textContent = 6
 }
 
 const minusClick = document.getElementById("minus");
@@ -153,11 +156,12 @@ oneClick.addEventListener("click", storeValueOne)
 
 function storeValueOne() {
  if (operator) {
-    secondNum = 1;
+    secondNum += "1";
+    document.getElementById("display").textContent = secondNum;
  } else {
-    firstNum = 1;
+    firstNum += "1";
+    document.getElementById("display").textContent = firstNum;
  }  
- document.getElementById("display").textContent = 1 ;
 
 }
 
@@ -167,12 +171,12 @@ twoClick.addEventListener("click", storeValueTwo);
 function storeValueTwo() {
 
      if(operator) {
-        secondNum = 2;
+        secondNum += "2";
+        document.getElementById("display").textContent = secondNum;
     } else {
-        firstNum = 2;
+        firstNum += "2";
+        document.getElementById("display").textContent = firstNum;
     }
-   
-    document.getElementById("display").textContent = 2;
 }
 
 const threeClick = document.getElementById("three");
@@ -180,12 +184,12 @@ threeClick.addEventListener("click", storeValueThree);
 
 function storeValueThree() {
     if(operator) {
-        secondNum = 3;
+        secondNum += "3";
+        document.getElementById("display").textContent = secondNum;
     } else {
-        firstNum = 3;
+        firstNum += "3";
+        document.getElementById("display").textContent = firstNum;
     }
-
-    document.getElementById("display").textContent = 3;
 }
 
 
@@ -203,12 +207,12 @@ zeroClick.addEventListener("click", storeValueZero);
 
 function storeValueZero() {
     if(operator) {
-        secondNum = 0;
+        secondNum += "0";
+        document.getElementById("display").textContent = secondNum;
     } else {
-        firstNum = 0;
+        firstNum += "0";
+        document.getElementById("display").textContent = firstNum;
     }
-
-    document.getElementById("display").textContent = 0;
 }
 
 const clearClick = document.getElementById("clear");
