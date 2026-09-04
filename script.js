@@ -219,6 +219,8 @@ function storeValueDivide() {
     }
     operator = "/";
     document.getElementById("display").textContent = "/"
+
+    
 }
 
 
@@ -250,6 +252,17 @@ const equalsClick = document.getElementById("equals");
 equalsClick.addEventListener("click", storeValueEquals);
 
 function storeValueEquals() {
+
+    //display snarky message is user tries to divide by zero!
+
+    if (operator === "/" && Number(secondNum) === 0) {
+        document.getElementById("display").textContent = "snarky message!"
+        firstNum ="";
+        secondNum = "";
+        operator = undefined;
+        return;
+    }
+
     console.log(firstNum, operator, secondNum)
     const result = operate(Number(firstNum), operator, Number(secondNum));
     document.getElementById("display").textContent = result;
