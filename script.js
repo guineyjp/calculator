@@ -97,6 +97,12 @@ const xClick = document.getElementById("multiply"); //selecting the element in t
 xClick.addEventListener("click", storeValueX); //listening for the event click
 
 function storeValueX() {
+
+    //need to chain calculations so will do this by checking if firstNum, operator and secondNum have all been pressed
+    if (firstNum !== "" && operator && secondNum !=="") {
+        firstNum = String(operate(Number(firstNum), operator, Number(secondNum)));
+        secondNum = "";
+    }
    operator = "*";
    document.getElementById('display').textContent = "x";
 
@@ -145,7 +151,15 @@ function storeValueSix() {
 const minusClick = document.getElementById("minus");
 minusClick.addEventListener("click", storeValueMinus);
 
+
+
 function storeValueMinus() {
+
+    //need to chain calculations so will do this by checking if firstNum, operator and secondNum have all been pressed
+    if (firstNum !== "" && operator && secondNum !=="") {
+        firstNum = String(operate(Number(firstNum), operator, Number(secondNum)));
+        secondNum = "";
+    }
     operator ="-";
     document.getElementById("display").textContent= "-";
 
@@ -197,6 +211,12 @@ const divideClick = document.getElementById("divide");
 divideClick.addEventListener("click", storeValueDivide);
 
 function storeValueDivide() {
+
+    //need to chain calculations so will do this by checking if firstNum, operator and secondNum have all been pressed
+    if (firstNum !== "" && operator && secondNum !=="") {
+        firstNum = String(operate(Number(firstNum), operator, Number(secondNum)));
+        secondNum = "";
+    }
     operator = "/";
     document.getElementById("display").textContent = "/"
 }
@@ -242,6 +262,11 @@ const plusClick = document.getElementById("plus");
 plusClick.addEventListener("click", storeValuePlus );
 
 function storeValuePlus() {
+    //need to chain calculations so will do this by checking if firstNum,operator and secondNum have all been pressed
+    if (firstNum !== "" && operator && secondNum !=="") {
+        firstNum = String(operate(Number(firstNum), operator, Number(secondNum)));
+        secondNum = "";
+    }
     operator = "+";
     document.getElementById("display").textContent = "+"
 }
