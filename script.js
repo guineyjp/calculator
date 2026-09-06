@@ -264,7 +264,7 @@ function storeValueEquals() {
     }
 
     console.log(firstNum, operator, secondNum)
-    const result = operate(Number(firstNum), operator, Number(secondNum));
+    const result = operate(Number(firstNum), operator, Number(secondNum)).toFixed(10);
     document.getElementById("display").textContent = result;
     firstNum = "";
     secondNum = "";
@@ -277,7 +277,7 @@ plusClick.addEventListener("click", storeValuePlus );
 function storeValuePlus() {
     //need to chain calculations so will do this by checking if firstNum,operator and secondNum have all been pressed
     if (firstNum !== "" && operator && secondNum !=="") {
-        firstNum = String(operate(Number(firstNum), operator, Number(secondNum)));
+        firstNum = String(operate(Number(firstNum), operator, Number(secondNum)).toFixed(10));
         secondNum = "";
     }
     operator = "+";
