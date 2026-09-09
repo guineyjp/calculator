@@ -264,7 +264,7 @@ function storeValueEquals() {
     }
 
     console.log(firstNum, operator, secondNum)
-    const result = operate(Number(firstNum), operator, Number(secondNum)).toFixed(10);
+    const result = parseFloat(operate(Number(firstNum), operator, Number(secondNum)).toFixed(5));
     document.getElementById("display").textContent = result;
     firstNum = "";
     secondNum = "";
